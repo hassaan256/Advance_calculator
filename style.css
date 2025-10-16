@@ -1,0 +1,91 @@
+body {
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+}
+
+.mainCal {
+    /* background-color: bisque; */
+    height: 90%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.put {
+    background-color: rgb(92, 91, 91);
+    /* margin-bottom: 10rem; */
+    width: 50%;
+    height: 22%;
+    margin-top: 3rem;
+    border-radius: 15px 15px 0px 0px;
+
+}
+
+#input {
+    background-color: rgb(92, 91, 91);
+    width: 97.5%;
+    height: 90%;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-size: 2rem;
+}
+
+#input:focus {
+    outline: none;
+}
+
+.symbols {
+    /* background-color: blueviolet; */
+    width: 50%;
+    height: 100%;
+    /* margin-top: -10rem; */
+    border-radius: 15px;
+
+}
+
+
+.opt,
+.num1,
+.num2,
+.num3,
+.foot {
+    /* background-color: black; */
+    width: 100%;
+    height: 20%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+
+}
+
+.equal {
+    grid-column: span 2;
+    border-bottom-right-radius: 15px;
+    background-color: rgb(74, 199, 199);
+}
+
+.zero {
+    border-bottom-left-radius: 15px;
+}
+
+
+button {
+    height: 100%;
+    width: 100%;
+    font-size: 2rem;
+    border: none;
+    background-color: rgba(42, 52, 53, 0.9);
+    color: rgb(241, 231, 211);
+    box-shadow: inset 1px 2px 2px 0.5px rgb(0, 0, 0, 0.5);
+}
+
+.operation {
+    background-color: rgb(79, 133, 133);
+}
