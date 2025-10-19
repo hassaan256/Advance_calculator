@@ -8,7 +8,7 @@ function press(val) {
         resultShown = false;
     }
 
-    if (display.value === "Syntax Error" || display.value === "Syntax Error!") {
+    if (display.value === "Error" || display.value === "Error !") {
         display.value = "";
     }
     display.value += val;
@@ -24,14 +24,14 @@ function delChar() {
 
 function calculation() {
     var text = display.value;
-    var operator = "+-*/%"
+    var operator = "+-*/%."
 
     if (text === "") {
         display.value = "";
         alert("Please enter number and operator.");
         return;
     } else if (operator.includes(text[0]) || operator.includes(text[text.length - 1])) {
-        display.value = "Syntax Error!"
+        display.value = "Error !"
         return;
     }
 
@@ -49,7 +49,7 @@ function calculation() {
 
 
     if (found) {
-        display.value = "Syntax Error";
+        display.value = "Error !";
     } else {
         display.value = eval(text);
         resultShown = true;
