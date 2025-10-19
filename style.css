@@ -90,42 +90,40 @@
 
 
 
-
- @media (max-width: 575px) {
-     .mainCal {
-         width: 50vw;
-         height: 100vh;
+ @media (min-width: 320px) and (max-width: 575px){
+    .mainCal {
+         width: 80vw;
+         height: 70vh;
      }
 
      .symbols {
-         width: 100%;
+         width: 90%;
          height: 70%;
      }
 
      .put {
-         width: 100%;
+         width: 90%;
          height: 15%;
      }
 
      #input {
-         font-size: 1.7rem;
+         font-size: 1.3rem;
+         padding-top: 25px;
      }
 
      .button {
-         width: 40px;
-         height: 40px;
+         width: 30px;
+         height: 30px;
          border-radius: 50%;
-         font-size: 1.1rem;
+         font-size: 0.8rem;
      }
 
      .buttonOpt {
-         width: 40px;
-         height: 40px;
+         width: 30px;
+         height: 30px;
          border-radius: 50%;
-         font-size: 1.1rem;
+         font-size: 0.8rem;
      }
-
-
  }
 
 
@@ -242,3 +240,4 @@
 
 
  }
+
