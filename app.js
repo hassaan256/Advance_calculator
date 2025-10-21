@@ -1,14 +1,14 @@
 
 var display = document.getElementById("input");
-var resultShown = false;
+// var resultShown = false;
 
 function press(val) {
-    if (resultShown) {
-        display.value = "";
-        resultShown = false;
-    }
+    // if (resultShown) {
+    //     display.value = "";
+    //     resultShown = false;
+    // }
 
-    if (display.value === "Error" || display.value === "Error !") {
+    if (display.value === "Error!") {
         display.value = "";
     }
     display.value += val;
@@ -19,19 +19,21 @@ function clearDis() {
 }
 
 function delChar() {
+    if (display.value === "Error!")
+        return;
     display.value = display.value.slice(0, -1);
 }
 
 function calculation() {
     var text = display.value;
-    var operator = "+-*/%."
+    var operator = "+-*/%.";
 
     if (text === "") {
         display.value = "";
         alert("Please enter number and operator.");
         return;
     } else if (operator.includes(text[0]) || operator.includes(text[text.length - 1])) {
-        display.value = "Error !"
+        display.value = "Error!"
         return;
     }
 
@@ -43,15 +45,20 @@ function calculation() {
             found = true;
             break;
         }
+
+        if (display.value === "Error!") {
+            return;
+        }
+
     }
 
 
 
 
     if (found) {
-        display.value = "Error !";
+        display.value = "Error!";
     } else {
         display.value = eval(text);
-        resultShown = true;
+        // resultShown = true;
     }
 }
